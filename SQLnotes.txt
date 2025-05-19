@@ -1,0 +1,59 @@
+-> Crear una bd
+CREATE DATABASE NAME
+
+
+-> Crear una tabla
+CREATE TABLE NOMBRE (
+	id INT AUTO_INCREMENT,
+	nombre VARCHAR(25),
+	PRIMARY KEY(id),
+	FOREIGN KEY(fk_name) REFERENCES table_name(fk_name),
+);
+
+
+-> Insertar datos
+INSERT INTO nombre_tabla(nombre, apellido, edad) 
+VALUES("Nohely", "Sosa", 19), ("Nohely", "Sosa", 19);
+
+
+-> Modificar el tipo de dato a columnas de tablas existentes
+ALTER TABLE nombre_tabla
+MODIFY COLUMN nombre_columna nuevo_tipo;
+
+
+-> Añadir columnas a tablas existentes
+ALTER TABLE nombre_tabla
+ADD nombre_columna tipo_de_dato;
+
+
+-> Añadir fk a tablas existentes
+ALTER TABLE nombre_tabla(la que va a recibir la pk, o table hija)
+ADD CONSTRAINT fk_nombre
+FOREIGN KEY (columna_hija)
+REFERENCES tabla_padre(columna_padre)(quien tiene la pk a referenciar);
+
+
+-> Consultas
+SELECT * FROM nombre_tabla
+SELECT columna FROM nombre_tabla WHERE condicion = ;
+#SELECT idPersona FROM persona WHERE edad = 20;
+(Muestra el nombre de la persona cuya edad sea igual a 20)
+
+
+-> Modificacion de filas
+UPDATE nombre_tabla
+SET columna = expression
+WHERE condiciones = ; 
+
+#UPDATE persona SET edad = edad + 1 WHERE idPersona = 1;
+(Modifica la edad de la persona cuyo id sea 1)
+
+
+-> Eliminar datos de una fila en especifico o todo
+DELETE FROM persona
+WHERE idPersona = 2;
+
+-> Eliminar columnas
+ALTER TABLE nombre_tabla
+DROP COLUMN nombre_columna;
+
