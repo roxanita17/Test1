@@ -16,17 +16,17 @@ INSERT INTO nombre_tabla(nombre, apellido, edad)
 VALUES("Nohely", "Sosa", 19), ("Nohely", "Sosa", 19);
 
 
--> Modificar el tipo de dato a columnas de tablas existentes
+-> @Modificar el tipo de dato a columnas de tablas existentes
 ALTER TABLE nombre_tabla
 MODIFY COLUMN nombre_columna nuevo_tipo;
 
 
--> Añadir columnas a tablas existentes
+-> @Añadir columnas a tablas existentes
 ALTER TABLE nombre_tabla
 ADD nombre_columna tipo_de_dato;
 
 
--> Añadir fk a tablas existentes
+-> @Añadir fk a tablas existentes
 ALTER TABLE nombre_tabla(la que va a recibir la pk, o table hija)
 ADD CONSTRAINT fk_nombre
 FOREIGN KEY (columna_hija)
@@ -56,4 +56,15 @@ WHERE idPersona = 2;
 -> Eliminar columnas
 ALTER TABLE nombre_tabla
 DROP COLUMN nombre_columna;
+
+-> Eliminar Clave Foraneas
+ALTER TABLE factura.persona 
+DROP FOREIGN KEY persona_ibfk_1
+
+-> Eliminar tabla
+DROP TABLE nombre‑tabla
+
+-> Eliminar BD
+DROP DATABASE nombre‑tabla
+
 

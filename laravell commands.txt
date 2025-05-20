@@ -1,0 +1,6 @@
+-Crear un Proyecto
+composer create-project laravel/laravel:^11.0 example-app
+
+-Crear un Proyecto forma 2
+composer global require Laravel/installer
+Laravel new name

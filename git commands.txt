@@ -1,0 +1,15 @@
+git clone url
+git add .
+git commit -m ""
+git checkout -b nombre
+git checkout nombre
+git pull origin branchname (actualizar cambios de una parte)
+git pull (actualiza todo el Proyecto)
+git push -u origin brachname
+git push
+
+
+
+
+
+php -d variables_order=GPCS artisan serve
